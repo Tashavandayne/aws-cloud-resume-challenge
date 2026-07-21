@@ -1,60 +1,396 @@
+/* Page layout */
+
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
-    background-color: lightgrey;
-    font-family: Arial, Helvetica, sans-serif;
     padding: 40px;
+    background-color: #e5e7eb;
+    color: #1f2937;
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* Navigation */
+
+.navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.navigation a {
+    padding: 8px 14px;
+    color: #003366;
+    background-color: #f8fafc;
+    border: 1px solid #c7d8eb;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition:
+        background-color 0.25s ease,
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+.navigation a:hover {
+    color: #ffffff;
+    background-color: #003366;
+    transform: translateY(-2px);
+}
+
+.navigation a:focus-visible {
+    outline: 3px solid #0056b3;
+    outline-offset: 3px;
+}
+
+
+/* Back-to-top link*/
+
+.back-to-top {
+    margin-top: 10px;
+}
+
+/* Main cards */
 
 .card {
     margin-bottom: 20px;
-    border-radius: 10px;
-    background-color: white;
     padding: 25px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
-.two-column {
-    display: flex;
-    gap: 20px;
-}
 
-.two-column .card {
-    flex: 1;
+/* Header */
+
+header.card {
+    padding: 40px 25px;
 }
 
 h1 {
-    color: blue;
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #003366;
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 1px;
     text-align: center;
 }
 
-h2, h3 {
+header h2 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 1.5rem;
     text-align: center;
 }
 
-h1, h2, h3, h4 {
+header h3 {
+    margin-top: 0;
+    margin-bottom: 0;
+    color: #4b5563;
+    font-size: 1.1rem;
+    font-weight: normal;
+    text-align: center;
+}
+
+
+/* Section headings */
+
+h4 {
+    margin-top: 0;
+    margin-bottom: 24px;
+    padding: 16px;
+    color: #003366;
+    background-color: #ffffff;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.22);
+}
+
+h5 {
     margin-top: 0;
 }
 
-h4 {
-    color: darkblue;
-    text-align: center;
-    background-color: #ffffff;
-    border-radius: 8px;
-    padding: 20px;
-    /* x-offset | y-offset | blur | color */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
-}
+
+/* Paragraphs and lists */
 
 p {
     line-height: 1.5;
 }
 
-/* Fit all screens */
-@media (max-width: 768px) {
-    body{
-        padding: 20px;
-    }
-    
-    .two-column {
-        flex-direction: column;
+li {
+    margin-bottom: 6px;
+    line-height: 1.5;
+}
+
+
+/* General links */
+
+a {
+    display: inline-block;
+    color: #0056b3;
+    font-weight: 500;
+    text-decoration: none;
+    transition:
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+a:hover {
+    color: #003366;
+    transform: translateX(4px);
+}
+
+
+/* Resume button */
+
+.resume-button {
+    display: block;
+    width: fit-content;
+    margin: 24px auto 0;
+    padding: 12px 20px;
+    color: #ffffff;
+    background-color: #003366;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition:
+        background-color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.resume-button:hover {
+    color: #ffffff;
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+
+/* Technical skills */
+
+.skills-columns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.skill-category h5 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #003366;
+    font-size: 1.05rem;
+}
+
+.skill-category ul {
+    margin: 0;
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.skill-category li {
+    margin-bottom: 8px;
+    color: #1f2937;
+}
+
+
+/* Projects */
+
+.project-item {
+    margin-bottom: 24px;
+    padding: 22px;
+    background-color: #f8fafc;
+    border: 1px solid #dbe3ec;
+    border-radius: 10px;
+    transition:
+        transform .25s ease,
+        box-shadow .25s ease;
+}
+
+.project-item:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0,0,0,.08);
+}
+
+.project-item:last-child {
+    margin-bottom: 0;
+}
+
+.project-item h5 {
+    margin: 0;
+    color: #003366;
+    font-size: 1.2rem;
+}
+
+.project-item p {
+    margin-top: 14px;
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+
+/* Technology tags */
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 14px;
+}
+
+.project-tags span {
+    padding: 6px 12px;
+    background-color: #e8f0fa;
+    color: #003366;
+    border-radius: 999px;
+    font-size: .85rem;
+    font-weight: 600;
+    border: 1px solid #c7d8eb;
+}
+
+
+/* Professional experience */
+
+.experience-item {
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #d1d5db;
+}
+
+.experience-item:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.experience-item h5 {
+    margin-bottom: 4px;
+    color: #003366;
+    font-size: 1.1rem;
+}
+
+.experience-details {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #4b5563;
+    font-weight: 600;
+}
+
+
+/* Certifications */
+
+.certification-item {
+    margin-bottom: 20px;
+}
+
+.certification-item:last-child {
+    margin-bottom: 0;
+}
+
+.certification-item h5 {
+    margin-bottom: 4px;
+    color: #003366;
+    font-size: 1.05rem;
+}
+
+.certification-item p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+/* Contact */
+
+.contact-list {
+    margin-bottom: 0;
+}
+
+
+/* Footer */
+
+footer {
+    padding: 10px 0 20px;
+    color: #4b5563;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+
+/* Tablet layout */
+
+@media (max-width: 900px) {
+    .skills-columns {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
+
+
+/* Mobile layout */
+
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+    }
+}
+
+
+/* Small mobile layout */
+
+@media (max-width: 480px) {
+    body {
+        padding: 12px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    header.card {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 1.9rem;
+    }
+
+    header h2 {
+        font-size: 1.25rem;
+    }
+
+    .skills-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .resume-button {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+a:focus-visible {
+    outline: 3px solid #0056b3;
+    outline-offset: 3px;
+}
+

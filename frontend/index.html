@@ -4,83 +4,326 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>AWS Cloud Resume Challenge</title>
+    <meta
+        name="description"
+        content="Portfolio and cloud resume for Tasha Van Dayne, a Computer Science student and aspiring Cloud Engineer."
+    >
+
+    <title>Tasha Van Dayne | Cloud Resume</title>
 
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <main>
+    <main id="top">
+
+        <!-- Header -->
         <header class="card">
             <h1>Tasha Van Dayne</h1>
             <h2>Computer Science Student</h2>
             <h3>Aspiring Cloud Engineer</h3>
-        </header>
-        
 
-        <section class="card">
+            <nav class="navigation" aria-label="Main navigation">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#projects">Projects</a>
+                <a href="#experience">Experience</a>
+                <a href="#education">Education</a>
+                <a href="#certifications">Certifications</a>
+                <a href="#contact">Contact</a>
+            </nav>
+
+            <a
+                class="resume-button"
+                href="assets/tasha-van-dayne-resume.pdf"
+                download
+            >
+                Download Resume
+            </a>
+        </header>
+
+        <!-- About Me -->
+        <section id="about" class="card">
             <h4>About Me</h4>
 
-            <p>Computer Science student (Graduation: Dec 2026) skilled in object-oriented 
-                development with C++, Java, and Python, alongside hands-on experience in 
-                Linux, Bash scripting, and cloud environments. Driven to build reliable 
-                software and automated cloud solutions. Seeking an entry-level Software 
-                Engineer or Cloud Engineer role.
+            <p>
+                Computer Science student graduating in December 2026 with
+                experience in object-oriented development using C++, Java,
+                and Python, along with hands-on experience in Linux, Bash
+                scripting, AWS, and cloud technologies. Passionate about
+                building reliable software and automated cloud solutions.
+                Seeking an entry-level Software Engineer or Cloud Engineer
+                opportunity.
             </p>
         </section>
 
-        <div class="two-column">
-        <!-- Skills -->
-        <section class="card">
-            <h4>Skills</h4>
+        <!-- Technical Skills -->
+        <section id="skills" class="card">
+            <h4>Technical Skills</h4>
 
-            <ul>
-                <li>AWS</li>
-                <li>C++</li>
-                <li>Java</li>
-                <li>Python</li>
-                <li>Linux</li>
-                <li>Git</li>
-                <li>GitHub</li>
-                <li>SQL</li>
-            </ul>
+            <div class="skills-columns">
+
+                <div class="skill-category">
+                    <h5>Languages</h5>
+
+                    <ul>
+                        <li>C++</li>
+                        <li>Java</li>
+                        <li>Python</li>
+                        <li>Bash</li>
+                        <li>SQL</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h5>Cloud &amp; DevOps</h5>
+
+                    <ul>
+                        <li>AWS</li>
+                        <li>Linux</li>
+                        <li>Git</li>
+                        <li>GitHub</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h5>Database &amp; Web</h5>
+
+                    <ul>
+                        <li>MySQL</li>
+                        <li>HTML5</li>
+                        <li>CSS3</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <h5>Developer Tools</h5>
+
+                    <ul>
+                        <li>VS Code</li>
+                        <li>VirtualBox</li>
+                        <li>Ubuntu</li>
+                    </ul>
+                </div>
+
+            </div>
         </section>
 
         <!-- Projects -->
-        <section class="card">
+        <section id="projects" class="card">
             <h4>Projects</h4>
 
-            <ul>
-                <li>Inventory Management System (C++)</li>
-                <li>AWS Cloud Resume Challenge (In Progress)</li>
-                <li>Pizza Cooking Game (C++)</li>
-            </ul>
+            <div class="project-item">
+                <h5>
+                    <a
+                        href="https://github.com/Tashavandayne/Inventory-Management-System"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Inventory Management System
+                    </a>
+                </h5>
+
+                <div class="project-tags">
+                    <span>C++</span>
+                    <span>Git</span>
+                    <span>GitHub</span>
+                    <span>Object-Oriented Programming</span>
+                </div>
+
+                <p>
+                    Console-based inventory management application featuring
+                    CRUD operations, modular source files, reusable functions,
+                    and Git/GitHub version control.
+                </p>
+            </div>
+
+            <div class="project-item">
+                <h5>
+                    <a
+                        href="https://github.com/Tashavandayne/aws-cloud-resume-challenge"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        AWS Cloud Resume Challenge
+                    </a>
+                </h5>
+
+                <div class="project-tags">
+                    <span>HTML5</span>
+                    <span>CSS3</span>
+                    <span>JavaScript</span>
+                    <span>AWS</span>
+                </div>
+
+                <p>
+                    Developing and deploying a responsive cloud-hosted resume
+                    while learning AWS services, frontend development, APIs,
+                    databases, and automated deployment workflows.
+                </p>
+            </div>
+
+            <div class="project-item">
+                <h5>Pizza Cooking Simulator</h5>
+
+                <div class="project-tags">
+                    <span>C++</span>
+                    <span>Object-Oriented Programming</span>
+                    <span>Game Logic</span>
+                </div>
+
+                <p>
+                    Interactive C++ game focused on user input,
+                    decision-making logic, and object-oriented programming
+                    concepts.
+                </p>
+            </div>
         </section>
-        </div>
+
+        <!-- Professional Experience -->
+        <section id="experience" class="card">
+            <h4>Professional Experience</h4>
+
+            <div class="experience-item">
+                <h5>Senior Customer Care Advocate</h5>
+
+                <p class="experience-details">
+                    MetLife – Group Life Products | 2022–2024
+                </p>
+
+                <ul>
+                    <li>
+                        Audited and validated complex claim documentation while
+                        ensuring compliance with regulatory and procedural
+                        standards.
+                    </li>
+
+                    <li>
+                        Maintained 98%+ accuracy through detailed analysis,
+                        careful documentation review, and consistent quality
+                        control.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h5>Claim Reviewer</h5>
+
+                <p class="experience-details">
+                    MetLife – Group Life Products | 2018–2022
+                </p>
+
+                <ul>
+                    <li>
+                        Investigated discrepancies and verified supporting
+                        documentation to ensure accurate claim decisions.
+                    </li>
+
+                    <li>
+                        Applied detailed policies and procedural requirements
+                        while managing multiple priorities in a high-volume
+                        environment.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <h5>Dental Claim Processor</h5>
+
+                <p class="experience-details">
+                    MetLife – Dental | 2015–2018
+                </p>
+
+                <ul>
+                    <li>
+                        Processed high-volume claims while maintaining strict
+                        quality, accuracy, and documentation standards.
+                    </li>
+
+                    <li>
+                        Developed strong analytical and organizational skills
+                        through consistent attention to detail.
+                    </li>
+                </ul>
+            </div>
+        </section>
 
         <!-- Education -->
-         <section class="card">
+        <section id="education" class="card">
             <h4>Education</h4>
 
             <p>
+                <strong>SUNY Polytechnic Institute</strong><br>
                 Bachelor of Science in Computer Science<br>
                 Expected Graduation: December 2026
             </p>
         </section>
 
+        <!-- Certifications -->
+        <section id="certifications" class="card">
+            <h4>Certifications</h4>
+
+            <div class="certification-item">
+                <h5>Responsive Web Design</h5>
+                <p>freeCodeCamp</p>
+            </div>
+
+            <div class="certification-item">
+                <h5>Programming and Web Development Courses</h5>
+
+                <p>
+                    SoloLearn: Python, HTML, CSS, Java, JavaScript, and C++
+                </p>
+            </div>
+        </section>
+
         <!-- Contact -->
-         <section class="card">
+        <section id="contact" class="card">
             <h4>Contact</h4>
 
-            <ul>
-                <li>Email: <a href="mailto:tashavandayne@gmail.com">tashavandayne@gmail.com</a></li>
-                <li>GitHub: <a href="https://github.com/Tashavandayne" target="_blank" rel="noreferrer">github.com/Tashavandayne</a></li>
-                <li>LinkedIn: <a href="https://linkedin.com/in/tasha-van-dayne-b025001a1" target="_blank" rel="noreferrer">linkedin.com/in/tasha-van-dayne-b025001a1</a></li>
+            <ul class="contact-list">
+                <li>
+                    Email:
+                    <a href="mailto:tashavandayne@gmail.com">
+                        tashavandayne@gmail.com
+                    </a>
+                </li>
+
+                <li>
+                    GitHub:
+                    <a
+                        href="https://github.com/Tashavandayne"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        github.com/Tashavandayne
+                    </a>
+                </li>
+
+                <li>
+                    LinkedIn:
+                    <a
+                        href="https://linkedin.com/in/tasha-van-dayne-b025001a1"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        linkedin.com/in/tasha-van-dayne-b025001a1
+                    </a>
+                </li>
             </ul>
-         </section>
+        </section>
 
+        <!-- Footer -->
+        <footer>
+            <p>
+                Built by Tasha Van Dayne as part of the AWS Cloud Resume Challenge.
+            </p>
 
+            <a class="back-to-top" href="#top">
+                Back to top
+            </a>
+        </footer>
 
-</main>
+    </main>
 </body>
 </html>
