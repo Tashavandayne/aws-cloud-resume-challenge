@@ -156,6 +156,11 @@ a:hover {
     transform: translateX(4px);
 }
 
+a:focus-visible {
+    outline: 3px solid #0056b3;
+    outline-offset: 3px;
+}
+
 
 /* Resume button */
 
@@ -320,6 +325,22 @@ a:hover {
 }
 
 
+/* Visitor counter */
+.visitor-counter {
+    text-align: center;
+}
+
+.visitor-counter p {
+    margin-bottom: 0;
+    font-size: 1.1rem;
+}
+
+#visitor-count {
+    color: #003366;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
 /* Footer */
 
 footer {
@@ -389,8 +410,5 @@ footer p {
     }
 }
 
-a:focus-visible {
-    outline: 3px solid #0056b3;
-    outline-offset: 3px;
-}
+
 
