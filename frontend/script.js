@@ -1,26 +1,19 @@
 // Get the HTML element that displays the visitor count
 const visitorCount = document.getElementById("visitor-count");
 
-// Retrieve the saved count from the browser's local storage
-let count = localStorage.getItem("count");
+// Function to retrieve and display the visitor count from AWS
+async function updateVisitorCount() {
+    // Send a request to API Gateway and wait for the response
+    const response = await fetch(
+        "https://6czmmz1qo5.execute-api.us-east-2.amazonaws.com/count"
+    );
 
-// If no count has been saved yet, start at 0
-if (count === null) {
-    count = 0;
-}
+    // Convert the JSON response into a JavaScript object
+    const data = await response.json();
 
-// Function to update the visitor counter
-function updateVisitorCount() {
-    // Convert the stored value to a number and increment it by 1
-    count = Number(count) + 1;
-
-    // Save the updated count back to local storage
-    localStorage.setItem("count", count);
-
-    // Display the updated count on the webpage
-    visitorCount.textContent = count;
+    // Display the updated visitor count on the webpage
+    visitorCount.textContent = data.visits;
 }
 
 // Run the function
 updateVisitorCount();
-
