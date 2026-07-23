@@ -1,10 +1,10 @@
-# AWS Cloud Resume Challenge
+AWS Cloud Resume Challenge
 
-## Overview
+Overview
 
 A cloud-hosted resume built as part of the AWS Cloud Resume Challenge. This project demonstrates a serverless architecture by combining a responsive resume website with an AWS-powered visitor counter.
 
-## Goals
+Goals
 
 - Build a professional online resume
 - Learn core AWS cloud services
@@ -12,7 +12,7 @@ A cloud-hosted resume built as part of the AWS Cloud Resume Challenge. This proj
 - Build a serverless application
 - Gain hands-on experience with JavaScript and AWS services
 
-## Technologies
+Technologies
 
 - HTML
 - CSS
@@ -24,7 +24,7 @@ A cloud-hosted resume built as part of the AWS Cloud Resume Challenge. This proj
 - Git
 - GitHub
 
-## Architecture
+Architecture
 
 ```text
 Resume Website
@@ -42,7 +42,7 @@ AWS Lambda
 Amazon DynamoDB
 ```
 
-## Features
+Features
 
 - Professional online resume
 - Serverless visitor counter
@@ -53,11 +53,11 @@ Amazon DynamoDB
 - Persistent visitor count
 - Responsive website design
 
-## Project Status
+Project Status
 
 ✅ Visitor counter completed
 
-### Planned Improvements
+Planned Improvements
 
 - Deploy website to Amazon S3
 - Configure CloudFront distribution
@@ -66,6 +66,6 @@ Amazon DynamoDB
 - Automate deployments with GitHub Actions
 - Add a contact form
 
-## Author
+Author
 
 **Tasha Van Dayne**
