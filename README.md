@@ -1,71 +1,63 @@
-AWS Cloud Resume Challenge
+# AWS Cloud Resume Challenge
 
-Overview
+## Overview
 
-A cloud-hosted resume built as part of the AWS Cloud Resume Challenge. This project demonstrates a serverless architecture by combining a responsive resume website with an AWS-powered visitor counter.
+A cloud-hosted resume built on AWS featuring a serverless visitor counter. The project demonstrates modern cloud architecture using Amazon S3, CloudFront, API Gateway, AWS Lambda, and DynamoDB.
 
-Goals
+## Live Website
 
-- Build a professional online resume
-- Learn core AWS cloud services
-- Practice Git and GitHub workflows
-- Build a serverless application
-- Gain hands-on experience with JavaScript and AWS services
+https://d1fmentbqn95f7.cloudfront.net
 
-Technologies
+## Features
+
+- ✅ Static website hosted in Amazon S3
+- ✅ Global content delivery with Amazon CloudFront
+- ✅ Serverless visitor counter powered by AWS Lambda
+- ✅ REST API built with Amazon API Gateway
+- ✅ Visitor data stored in Amazon DynamoDB
+- ✅ Version control with Git and GitHub
+- ✅ Cost monitoring with Amazon CloudWatch Billing Alarm
+
+## Technologies
 
 - HTML
 - CSS
 - JavaScript
+- Amazon S3
+- Amazon CloudFront
+- Amazon API Gateway
 - AWS Lambda
 - Amazon DynamoDB
-- API Gateway
+- Amazon CloudWatch
+- Amazon SNS
 - IAM
 - Git
 - GitHub
 
-Architecture
+## Architecture
 
-```text
-Resume Website
-       │
-       ▼
-JavaScript (fetch)
-       │
-       ▼
+```
+Browser
+    │
+    ▼
+CloudFront
+    │
+    ▼
+Amazon S3
+    │
+    ▼
+JavaScript
+    │
+    ▼
 API Gateway
-       │
-       ▼
+    │
+    ▼
 AWS Lambda
-       │
-       ▼
+    │
+    ▼
 Amazon DynamoDB
 ```
 
-Features
+## Status
 
-- Professional online resume
-- Serverless visitor counter
-- JavaScript Fetch API integration
-- AWS Lambda backend
-- Amazon DynamoDB data storage
-- API Gateway HTTP API
-- Persistent visitor count
-- Responsive website design
-
-Project Status
-
-✅ Visitor counter completed
-
-Planned Improvements
-
-- Deploy website to Amazon S3
-- Configure CloudFront distribution
-- Register a custom domain
-- Enable HTTPS with AWS Certificate Manager
-- Automate deployments with GitHub Actions
-- Add a contact form
-
-Author
-
-**Tasha Van Dayne**
+✅ Complete
